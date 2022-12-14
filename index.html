@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en-CA">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MDIA2294 Final Project: Sherwood Seabrook</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Biryani:wght@300;600&family=Hind+Guntur:wght@400;600&family=Oswald:wght@700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/newreset.css">
+        <link rel="stylesheet" href="styles/fullpage.css">
+        <link rel="stylesheet" href="slick/slick-theme.css"/>
+        <link rel="stylesheet" href="slick/slick.css">
+        <link rel="stylesheet" href="styles/jquery-ui.min.css">
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="header">
+                <a href="#sec1"><h1>Javascript Guide</h1></a>
+                <ul class="gn">
+                    <li><a href="#sec1" title="JavaScript Concepts">JavaScript Concepts</a></li>
+                    <li><a href="#sec2" title="JQuery Concepts">JQuery Concepts</a></li>
+                    <li><a href="#sec3" title="Plugins">Plugins</a></li>
+                </ul>
+            </div>
+        </header>
+        <div id="fullpage">
+            <div class="section section-1" data-anchor="sec1">
+                <div class="slide slide-1"><h2>Javascript Concepts</h2></div>
+                <div class="slide slide-2">
+                    <div class="content-wrapper">
+                        <div class="slide-head">
+                            <h3>Javascript</h3>
+                        </div>
+                        <p class="reg-txt">JavaScript, often abbreviated JS, is a programming language that is one of the core technologies of the World Wide Web, alongside HTML and CSS. As of 2022, 98% of websites use JavaScript on the client side for webpage behavior, often incorporating third-party libraries.</p>
+                        <br>
+                        <p class="quote"></span><i>-wikipedia.com</i></p>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="content-wrapper">
+                        <div class="slide-head">
+                            <h3>The DOM (Document Object Model)</h3>
+                        </div>
+                        <p class="reg-txt">The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the logical structure of documents and the way a document is accessed and manipulated.</p>
+                        <br>
+                        <p class="quote"></span><i>-w3.org</i></p>
+                        <p class="reg-txt">The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document as a tree structure wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree.</p>
+                        <br>
+                        <p class="quote"><i>-wikipedia.com</i></p>
+                        <p class="reg-txt">The HTML DOM can be accessed with JavaScript (and with other programming languages). In the DOM, all HTML elements are defined as <b>objects</b>. The programming interface is the properties and methods of each object. A <b>property</b> is a value that you can get or set (like changing the content of an HTML element). A <b>method</b> is an action you can do (like add or deleting an HTML element).</p>
+                        <br>
+                        <p class="quote"><i>-w3schools.com</i></p>
+                    </div>
+                </div>
+                <div class="slide slide-4">
+                    <div class="content-wrapper">
+                        <h4>DOM Objects</h4>
+                        <div class="two-col">
+                            <ul class="l-col">
+                                <!-- citation: https://www.w3schools.com/js/js_htmldom.asp -->
+                                <li><h5>The Document Object</h5>
+                                    <p>When an HTML document is loaded into a web browser, it becomes a document object.</p>
+                                </li>
+                                <li><h5>The Element Object</h5>
+                                    <p>In the HTML DOM, the Element object represents an HTML element, like P, DIV, A, TABLE, or any other HTML element.</p>
+                                </li>
+                                <li><h5>The Attr Object</h5>
+                                    <p>In the HTML DOM, an Attr object represents an HTML attribute. An HTML attribute always belongs to an HTML element. A NamedNodeMap is an array-like unordered collection of an element's attributes. In other words: a NamedNodeMap is a list of Attr objects. A NamedNodeMap has a length property that returns the number of nodes. The nodes can be accessed by name or index numbes. The index starts at 0.</p>
+                                </li>
+                            </ul>
+                            <div class="r-col">
+                                <div class="svg">
+                                <img src="images/DOMchart3.svg" alt="A chart illustrating the DOM hierarchy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-5">
+                    <div class="content-wrapper">
+                        <h4>DOM Methods</h4>
+                        <p>HTML DOM methods are actions you can perform (on HTML Elements). The following are some examples of DOM methods:</p>
+                        <div class="accordion">
+                            <h5>Types of DOM Methods</h5>
+                            <div>
+                                <table>
+                                    <!-- citation: https://www.w3schools.com/js/js_htmldom_document.asp -->
+                                    <tr>
+                                        <th><h5>Method</h5></th>
+                                        <th><h5>Description</h5></th>
+                                    </tr>
+                                    <tr>
+                                        <td><p>document.getElementById(id)</p></td>
+                                        <td><p>Find an element by element id</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>document.getElementsByClassName(name)</p></td>
+                                        <td><p>Find elements by class name</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>document.querySelector(element)</p></td>
+                                        <td><p>Returns the first Element that matches the selector</p></td> 
+                                        <!-- citation: https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector -->
+                                    </tr>
+                                    <tr>
+                                        <td><p>element.setAttribute(attribute, value)</p></td>
+                                        <td><p>Change the attribute value of an HTML element</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>document.createElement(element)</p></td>
+                                        <td><p>	Create an HTML element</p></td>
+                                    </tr>
+                                    <!-- <tr>
+                                        <td><p>document.removeChild(element)</p></td>
+                                        <td><p>	Remove an HTML element</p></td>
+                                    </tr> -->
+                                </table>
+                            </div>
+                            <h5>Sample Code</h5>
+                            <div>
+                                <code>
+                                    <span class="is-red">document.getElementById</span>("demo").innerHTML = "Hello World!";
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-6">
+                    <div class="content-wrapper">
+                        <h4>DOM Properties</h4>
+                        <p>HTML DOM properties are values (of HTML Elements) that you can set or change. The following are some examples of DOM Properties:</p>
+                        <div class="accordion">
+                            <h5>Types of DOM Properties</h5>
+                            <div>
+                                <table>
+                                    <!-- citation: https://linuxhint.com/html-dom-methods-and-properties/ -->
+                                    <tr>
+                                        <th><h5>Property</h5></th>
+                                        <th><h5>Description</h5></th>
+                                    </tr>
+                                    <tr>
+                                        <td><p>innerHTML</p></td>
+                                        <td><p>utilized for changing and displaying the element’s content</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>style</p></td>
+                                        <td><p>utilized for changing or displaying the attribute’s value of an HTML element</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>attributes</p></td>
+                                        <td><p>outputs a NamedNodeMap of the attribute of an HTML element</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>childElementCount</p></td>
+                                        <td><p>utilized for displaying the total number of an HTML element's child elements</p></td>
+                                    </tr>
+                                    <tr>
+                                        <td><p>className</p></td>
+                                        <td><p>utilized for changing or displaying the HTML class name value</p></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <h5>Sample Code</h5>
+                            <div>
+                                <code>
+                                    document.getElementById("demo")<span class="is-red">.innerHTML</span> = "Hello World!";
+                                </code>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-7">
+                    <div class="content-wrapper">
+                        <h3>Functions</h3>
+                        <!-- citation: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions -->
+                        <p>Functions are one of the fundamental building blocks in JavaScript. A function in JavaScript is similar to a procedure — a set of statements that performs a task or calculates a value, but for a procedure to qualify as a function, it should take some input and return an output where there is some obvious relationship between the input and the output. To use a function, you must define it somewhere in the scope from which you wish to call it.</p>
+                        <h4>Function Declarations</h4>
+                        <p>A function definition (also called a function declaration, or function statement) consists of the function keyword, followed by:</p>
+                        <ul>
+                            <li><p>The name of the function.</p></li>
+                            <li><p>A list of parameters to the function, enclosed in parentheses and separated by commas.</p></li>
+                            <li><p>The JavaScript statements that define the function, enclosed in curly brackets.</p></li>
+                        </ul>
+                        <code>function square(number) {<br>
+                            return number * number;<br>
+                          }
+                        </code>
+                    </div>
+                </div>
+                <div class="slide slide-8">
+                    <div class="content-wrapper">
+                        <h4>Function Parameters</h4>
+                        <!-- citation: https://linuxhint.com/function-parameters-arguments-javascript/ -->
+                        <p>In JavaScript, the parameters are the variables we list in the function declaration. When we create a function, we take parameters, which are included in the function definition. Multiple parameters can be added inside parentheses, separated by commas as shown in the below-given syntax:</p>
+                        <code>function name(parameter1, parameter2, parameter3) {<br>
+                            //body of the function<br>
+                          }
+                        </code>
+                        <p>Here, <b>“x”</b> and <b>“y”</b> are parameters in the following <b>“addNumber()”</b> function:</p>
+                        <code>
+                            function addNumber(x, y){<br>
+                                return x+y;<br>
+                              }
+                        </code>
+                    </div>
+                </div>
+                <div class="slide slide-9">
+                    <div class="content-wrapper">
+                        <h4>Function Arguments in JavaScript
+                        </h4>
+                        <p>The value we pass to a function is known as the argument of a function. Arguments are provided to the function when we call it. For instance, in the following example, <b>“5”</b> and <b>“6”</b> are the arguments passed to the <b>“addNumber()”</b> function:</p>
+                        <code>
+                            var sum=addNumber(5,6)<br>
+                            console.log(sum) 
+                        </code>
+                        <p>When we call the addNumber() function, JavaScript will create two new variables, <b>“x”</b> and <b>“y,”</b> according to our defined parameters and then initializes them by utilizing the arguments. After doing so, the body of the function will be executed:</p>
+                        <code>
+                            function addNumber(x, y){<br>
+                                return x+y;<br>
+                            }<br>
+                            <br>
+                            let sum=addNumber (5,6)<br>
+                            console.log(sum)<br>
+                            <br>
+                            output: 11
+                        </code>
+                    </div>
+                </div>
+                <div class="slide slide-10">
+                    <div class="content-wrapper">
+                        <h3>Variables</h3>
+                        <!-- citation: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Variables -->
+                        <p>A variable is a container for a value, like a number we might use in a sum, or a string that we might use as part of a sentence.</p>
+                        <h4>Declaring a variable</h4>
+                        <p>To use a variable, you've first got to create it — more accurately, we call this declaring the variable. To do this, we type the keyword <b>var</b> followed by the name you want to call your variable:</p>
+                        <code>
+                            var myName;<br>
+                            var myAge;
+                        </code>
+                        <h4>Initializing a variable</h4>
+                        <p>Once you've declared a variable, you can initialize it with a value. You do this by typing the variable name, followed by an equals sign (=), followed by the value you want to give it. For example:</p>
+                        <code>
+                            myName = 'Chris';<br>
+                            myAge = 37;
+                        </code>
+                    </div>
+                </div>
+                <div class="slide slide-11">
+                    <div class="content-wrapper">
+                        <h4>Global and Local Variables</h4>
+                        <!-- citation: https://www.geeksforgeeks.org/global-and-local-variables-in-javascript/ -->
+                        <p> Local variables are variables that are defined within functions. They have local scope, which means that they can only be used within the functions that define them.</p>
+                        <code>
+                                function myfunction() {<br>
+                                <span class="is-red">var petName = "Sizzer"; // local variable</span><br>
+                                document.getElementById("geeks").innerHTML =<br>
+                                    typeof petName + " " + petName;
+                            }
+                        </code>
+                        <p>In contrast, global variables are variables that are defined outside of functions. These variables have global scope, so they can be used by any function without passing them to the function as parameters.</p>
+                        <code>
+                               <span class="is-red">var petName = "Rocky";//global variable</span><br>
+                                myFunction();<br>
+                                <br>
+                                function myFunction() {<br>
+                                    document.getElementById("geeks").innerHTML =<br>
+                                    typeof petName + "- " + "My pet name is " + petName;<br>
+                                }
+                        </code>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-2" data-anchor="sec2">
+                <div class="slide slide-1"><h2>jQuery Concepts</h2></div>
+                <div class="slide slide-2">
+                    <div class="content-wrapper">
+                        <h3>jQuery</h3>
+                        <p class="reg-txt">jQuery is a JavaScript library designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and Ajax. It is free, open-source software using the permissive MIT License. As of May 2019, jQuery is used by 73% of the 10 million most popular websites.</p>
+                        <br>
+                        <p class="quote"></span><i>-wikipedia.com</i></p>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="content-wrapper">
+                        <h3>jQuery Selector Syntax</h3>
+                        <p>The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s). Basic syntax is: <b>$(selector).action()</b></p>
+                        <ul>
+                            <li><p>A $ sign to define/access jQuery</p></li>
+                            <li><p>A (selector) to "query (or find)" HTML elements</p></li>
+                            <li><p>A jQuery action() to be performed on the element(s)</p></li>
+                        </ul>
+                        <p>Examples:</p>
+                        <table>
+                            <tr>
+                                <td><p><b>$(this).hide()</b></p></td>
+                                <td><p>hides the current element</p></td>
+                            </tr>
+                            <tr>
+                                <td><p><b>$("p").hide()</b></p></td>
+                                <td><p>hides all p elements</p></td>
+                            </tr>
+                            <tr>
+                                <td><p><b>$(".test").hide()</b></p></td>
+                                <td><p>hides all elements with class="test"</p></td>
+                            </tr>
+                            <tr>
+                                <td><p><b>$("#test").hide()</b></p></td>
+                                <td><p> hides the element with id="test"</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="slide slide-4">
+                    <div class="content-wrapper">
+                        <h3>DOM get & set Actions</h3>
+                        <!-- citation: https://www.tutorialrepublic.com/javascript-tutorial/javascript-dom-get-set-attributes.php -->
+                        <h4>Working with Attributes</h4>
+                        <p>The attributes are special words used inside the start tag of an HTML element to control the tag's behavior or provides additional information about the tag. JavaScript provides several methods for adding, removing or changing an HTML element's attribute.</p>
+                        <h4>Getting Element's Attribute Value</h4>
+                        <p>The getAttribute() method is used to get the current value of a attribute on the element. If the specified attribute does not exist on the element, it will return 'null'.</p>
+                        <h4>Setting Attributes on Elements</h4>
+                        <p>The setAttribute() method is used to set an attribute on the specified element. If the attribute already exists on the element, the value is updated; otherwise a new attribute is added with the specified name and value.</p>
+                    </div>
+                </div>
+                <div class="slide slide-5">
+                    <div class="content-wrapper">
+                        <h3>Effects & Animation Actions</h3>
+                        <h4>jQuery Effect Methods</h4>
+                        <!-- citation: https://api.jquery.com/category/effects/ -->
+                        <p>The jQuery library provides several techniques for adding animation to a web page. These include simple, standard animations that are frequently used, and the ability to craft sophisticated custom effects. The following table lists some of the jQuery methods for creating animation effects.</p>
+                        <table>
+                            <tr>
+                                <th><p>Effect Method</p></th>
+                                <th><p>Description</p></th>
+                            </tr>
+                            <tr>
+                                <td><p>animate()</p></td>
+                                <td><p>Runs a custom animation</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>delay()</p></td>
+                                <td><p>Sets a delay for all queued functions</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>fadeIn() / fadeOut()</p></td>
+                                <td><p>Fades the selected elements</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>finish()</p></td>
+                                <td><p>Stops, removes and completes all queued animations</p></td>
+                            </tr>
+                            <tr>
+                                <td><p>slideDown() / slideUp()</p></td>
+                                <td><p>Slides down to show or up to hide the selected elements</p></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="slide slide-6">
+                    <div class="content-wrapper">
+                        <h4>jQuery Animation Example</h4>
+                        <p>This animation uses jQuery tools to create a randomly coloured div on each click that spins and bounces on the floor below.</p>
+                        <div class="board-container">
+                            <div class="board">
+                                <div class="spout"><h1>CLICK</h1></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section section-3" data-anchor="sec3">
+                <div class="slide slide-1"><h2>Javascript Plugins</h2></div>
+                <div class="slide slide-2">
+                    <div class="content-wrapper">
+                        <h3>fullpage.js</h3>
+                        <!-- citation: https://github.com/alvarotrigo/fullpage.js -->
+                        <p>"A simple and easy to use library that creates fullscreen scrolling websites and adds landscape sliders inside the sections of the site."</p>
+                        <p>This site is built using fullpage.js so you are seeing it in action right now! I'm a big fan of this plug in for it's smooth flow and easy implementation.</p>
+                        <h3>jQuery UI</h3>
+                        <!-- citation: https://jqueryui.com/ -->
+                        <p>"jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice."</p>
+                        <P>Some of the animations on this site use jQuery UI.</p>
+                    </div>
+                </div>
+                <div class="slide slide-3">
+                    <div class="content-wrapper">
+                        <h3>gsap</h3>
+                        <p>GSAP (Green Sock Animation Platform) is a Javascript library that allows developers to implement complex animations with minimal effort. Below is an animated toy I created using Scalable Vector Graphics (.svg) with gsap tools. With gsap I was able to accomplish, in one or two lines, animations that may otherwise have required dozens of lines of code.</p>
+                        <div class="display-box">
+                            <section class="container">
+                                <ul class="flex-wrapper">
+                                    <li class="btn"><button onclick="eyes(), hat()">
+                                        <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.48 100.48"><defs><style>.d{fill:#fff;}.e{fill:#fff;}</style></defs><g id="a"/><g id="b"><g id="c"><g><g><rect class="d" x="1" y="1" width="98.48" height="98.48" rx="17.59" ry="17.59"/></g><g><path class="e" d="M50.24,76.75c-22.26,0-39.84-24.6-40.58-25.65l-.61-.86,.61-.86c.74-1.05,18.32-25.65,40.58-25.65s39.84,24.6,40.58,25.65l.61,.86-.61,.86c-.74,1.05-18.32,25.65-40.58,25.65ZM12.75,50.24c3.32,4.34,19.04,23.51,37.49,23.51s34.16-19.17,37.49-23.51c-3.32-4.34-19.04-23.51-37.49-23.51S16.08,45.9,12.75,50.24Z"/></g><g><circle class="d" cx="50.24" cy="50.24" r="19.49"/><path class="e" d="M50.24,70.74c-11.3,0-20.49-9.19-20.49-20.49s9.19-20.49,20.49-20.49,20.49,9.19,20.49,20.49-9.19,20.49-20.49,20.49Zm0-38.99c-10.2,0-18.49,8.3-18.49,18.49s8.3,18.49,18.49,18.49,18.49-8.3,18.49-18.49-8.3-18.49-18.49-18.49Z"/></g><circle class="e" cx="50.24" cy="50.24" r="9.05"/></g></g></g></svg>
+                                    </button></li>
+                                    <li class="btn"><button onclick="ears(), hat()">
+                                        <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.48 100.48"><defs><style>.d{fill:#fff;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}.e{fill:#fff;}</style></defs><g id="a"/><g id="b"><g id="c"><g><rect class="d" x="1" y="1" width="98.48" height="98.48" rx="17.59" ry="17.59"/><g><path class="e" d="M50,83.94c-6.08,0-7.33-4.4-8.44-8.28-.73-2.55-1.48-5.19-3.42-7.34-1.48-1.64-2.94-1.9-4.79-2.23-4.21-.76-8.98-1.61-14.65-16.21-2.6-6.71-1.66-13.65,2.73-20.06,6.08-8.88,17.82-15.09,28.56-15.09,17.31,0,31.39,15.52,31.39,34.6s-14.08,34.6-31.39,34.6Zm0-66.21c-9.65,0-20.62,5.8-26.08,13.78-2.65,3.88-5.23,10.02-2.41,17.28,5.06,13.03,8.78,13.7,12.38,14.34,2.02,.36,4.32,.78,6.49,3.18,2.4,2.66,3.29,5.78,4.08,8.53,1.21,4.23,1.89,6.1,5.55,6.1,15.66,0,28.39-14.18,28.39-31.6s-12.74-31.6-28.39-31.6Z"/><path class="e" d="M40.41,58.57c-29.84-17.37,5.34-46.86,30.06-24.69-9.99-16.81-43.54-11.04-43.26,9.33,0,9.03,7.38,16.64,17.33,18.78-1.54-.97-2.93-2.12-4.12-3.42Z"/><path class="e" d="M61.54,59.5c-26.98-4.84-8.79-29.59,10.6-16.81-6-10.48-27.54-6.79-27.14,5.82-.36,9.3,12.99,15.02,21.43,10.6-1.54,.33-3.18,.49-4.89,.4Z"/></g></g></g></g></svg>
+                                    </button></li>
+                                    <li class="btn"><button onclick="mouth(), hat()">
+                                        <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.48 100.48"><defs><style>.d{fill:#fff;}.d,.e{stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}.e,.f{fill:#fff;}</style></defs><g id="a"/><g id="b"><g id="c"><g><rect class="d" x="1" y="1" width="98.48" height="98.48" rx="17.59" ry="17.59"/><path class="f" d="M40.46,71.29c6.5,1.28,13.3,3.13,19.56,0-4.78,5.79-14.17,4.04-19.56,0h0Z"/><path class="e" d="M84.5,46.97l-2.7-4.97c-.39-.71-1.09-.83-1.57-.26-.48,.57-.56,1.61-.17,2.32l.53,.97c-4.71,4.18-9.58,7.87-14.64,10.96-10.35,6.32-22.68,5.31-31.38,0-5.06-3.09-9.93-6.78-14.64-10.96l.53-.97c.39-.71,.31-1.75-.17-2.32-.48-.57-1.19-.46-1.57,.26l-2.7,4.97c-.39,.71-.31,1.75,.17,2.32,.21,.24,.45,.36,.7,.36,.33,0,.65-.21,.87-.62l1.87-3.45c4.25,6.14,9.71,11.09,15.51,15.37,9.43,6.96,20.73,7.65,30.24,0,5.65-4.55,11.26-9.24,15.51-15.37l1.87,3.45c.22,.41,.55,.62,.87,.62,.25,0,.49-.12,.7-.36,.48-.57,.56-1.61,.17-2.32Z"/></g></g></g></svg>
+                                    </button></li>
+                                    <li class="btn"><button onclick="nose(), hat()">
+                                        <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100.48 100.48"><defs><style>.d{fill:none;stroke:#fff;stroke-miterlimit:10;stroke-width:2px;}.e{fill:#fff;}</style></defs><g id="a"/><g id="b"><g id="c"><g><rect class="d" x="1" y="1" width="98.48" height="98.48" rx="17.59" ry="17.59"/><path class="e" d="M76.45,52.16l-13.77-23.85c-.67,.74-1.44,1.42-2.3,2.02l13.47,23.33c1.95,3.38,1.95,7.42,0,10.8-1.84,3.19-5.07,5.15-8.71,5.36,.74-1.81,1.16-3.8,1.16-5.87,0-3.76-1.34-7.21-3.56-9.9,1.3,2.24,2.06,4.86,2.06,7.68,0,7.71-5.61,14.04-12.77,14.73-.43,.04-.87,.07-1.31,.07h0c-.44,0-.88-.02-1.31-.07-7.16-.7-12.77-7.02-12.77-14.73,0-2.82,.76-5.44,2.06-7.68-2.22,2.69-3.56,6.15-3.56,9.9,0,2.09,.42,4.08,1.17,5.91-3.84-.05-7.28-2.05-9.2-5.39-1.95-3.38-1.95-7.42,0-10.8l13.47-23.33c-.86-.6-1.63-1.28-2.3-2.02l-13.77,23.85c-2.49,4.32-2.49,9.48,0,13.8s6.96,6.9,11.95,6.9h1.51c2.82,4.02,7.48,6.66,12.76,6.66s9.94-2.64,12.76-6.66h1.03c4.99,0,9.45-2.58,11.95-6.9,2.49-4.32,2.49-9.48,0-13.8Z"/></g></g></g></svg>
+                                    </button></li>
+                                    <!-- <li class="reset"><button onclick="reset()">RESET</button></li> -->
+                                </ul>
+                                <div class="svg">
+                                    <?xml version="1.0" encoding="UTF-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 601.61 717.51"><defs><style>.a{opacity:.45;}.a,.aa,.ab,.ac,.ad{fill:#fff;}.ae{fill:url(#l);}.ab{opacity:.23;}.af{isolation:isolate;}.ac{opacity:.3;}.ag{fill:#be1e2d;}.ad{opacity:.1;}.ah{fill:#ee2a7b;}.ai{fill:none;stroke:#231f20;stroke-linejoin:round;stroke-width:9px;}.aj{mix-blend-mode:color-dodge;opacity:.49;}.ak{fill:#754c29;}.al{fill:#a97c50;}.am{opacity:.34;}.an{fill:#c49a6c;}.ao{fill:#fbb040;}.ap{fill:#8b5e3c;}.aq{fill:#e187b8;}.ar{fill:#f7941d;}.as{fill:url(#n);}.at{fill:#231f20;}.au{fill:#414042;}</style>
+                                        
+                                    <radialGradient id="l" cx="396.72" cy="473.65" fx="396.72" fy="473.65" r="44.33" gradientTransform="translate(8.79 75.04) scale(.95 .8)" gradientUnits="userSpaceOnUse"><stop offset=".29" stop-color="#000"/><stop offset=".3" stop-color="#001d29"/><stop offset=".31" stop-color="#003b52"/><stop offset=".32" stop-color="#005777"/><stop offset=".34" stop-color="#006e98"/><stop offset=".35" stop-color="#0082b3"/><stop offset=".37" stop-color="#0092c9"/><stop offset=".39" stop-color="#009fda"/><stop offset=".42" stop-color="#00a7e6"/><stop offset=".45" stop-color="#00aced"/><stop offset=".55" stop-color="#00aeef"/><stop offset=".55" stop-color="#01aeef"/><stop offset=".56" stop-color="#08b0ef"/><stop offset=".56" stop-color="#14b4f0"/><stop offset=".56" stop-color="#25b9f1"/><stop offset=".56" stop-color="#3bc0f2"/><stop offset=".56" stop-color="#56c9f4"/><stop offset=".56" stop-color="#77d3f6"/><stop offset=".56" stop-color="#9cdff8"/><stop offset=".56" stop-color="#c7edfb"/><stop offset=".56" stop-color="#f5fcfe"/><stop offset=".56" stop-color="#fff"/></radialGradient><radialGradient id="n" cx="220.32" cy="470.91" fx="220.32" fy="470.91" r="42.32" xlink:href="#l"/></defs>
+                                        
+                                    <g class="af">
+                                        <g id="a" class="hat3"><g><path class="at" d="M48.55,345.98s2.76,28.24,27.59,0c24.83-28.24,7.72-109.34,7.72-109.34l-14.78-151.17S59.03,12.63,120.28,4.91s122.07-10.48,159.52,37.52c0,0,41.31-41.88,126.28-41.91s156.69,76.27,150.07,132.47-17.1,277.93-6.62,294.79,5.52,52.24,35.31,28.48-7.72,139-7.72,139c0,0-42.52,58.85-83.88,39.63s-89.36-23.14-89.36-23.14l-304.05-4.35s-55.67-17.1-64.5-124.69-20.97-148.41-7.72-195.31c0,0,4.67,48.38,20.97,58.58Z"/><path class="at" d="M510.5,639.19c-6.09,0-11.94-1.28-17.49-3.86-40.8-18.96-88.71-23.06-89.19-23.1l-304.02-4.35s-.09,0-.14-.02c-.14-.04-14.23-4.52-29.18-22.15-13.75-16.23-31.11-47.26-35.68-102.97-2.57-31.38-5.38-56.63-7.86-78.9-5.97-53.69-9.26-83.27,.15-116.58,.06-.23,.29-.39,.53-.36,.24,.02,.43,.21,.45,.45,.05,.48,4.84,48.26,20.73,58.21,.13,.08,.22,.22,.23,.38,0,.1,1.04,9.92,6.85,11.79,4.78,1.54,11.46-2.52,19.86-12.07,24.38-27.73,7.78-108.1,7.61-108.91l-14.79-151.23c-.05-.34-4.8-36.59,13.57-60.54,8.87-11.57,21.68-18.49,38.06-20.55,59.96-7.56,121.67-10.9,159.63,37.27C284.37,37.41,326.28,.04,406.07,.02h.04c44.01,0,88.8,20.83,119.84,55.73,22.33,25.11,33.52,53.29,30.69,77.3-6.8,57.72-16.87,278.1-6.69,294.47,3.05,4.9,4.78,11.25,6.46,17.4,2.34,8.57,4.54,16.67,9.96,18.44,4.19,1.37,10.13-1.08,18.16-7.48,3.12-2.49,5.72-3.11,7.73-1.84,15.48,9.75-13.41,135.97-14.65,141.34-.01,.07-.04,.13-.08,.18-.11,.15-10.85,14.91-26.53,27.12-14.08,10.97-27.79,16.52-40.48,16.52Zm-410.6-32.3l303.97,4.35c.51,.04,48.6,4.15,89.57,23.19,39.81,18.5,81.38-36.92,83.2-39.39,.97-4.26,29.78-130.91,15.07-140.17-1.61-1.01-3.82-.42-6.57,1.77-8.31,6.63-14.56,9.14-19.09,7.65-5.93-1.94-8.21-10.29-10.62-19.12-1.66-6.07-3.37-12.35-6.34-17.13-10.55-16.96-.44-235.81,6.55-295.11,2.8-23.73-8.3-51.62-30.44-76.52C494.35,21.73,449.83,1.02,406.11,1.02h-.04c-83.79,.02-125.51,41.34-125.92,41.76-.1,.1-.24,.15-.38,.15-.14,0-.28-.08-.37-.19C241.78-5.48,180.2-2.14,120.34,5.41c-16.11,2.03-28.69,8.82-37.4,20.17-18.11,23.62-13.42,59.46-13.37,59.82l14.79,151.19c.16,.76,16.86,81.62-7.85,109.72-8.68,9.88-15.72,14.04-20.92,12.36-5.96-1.92-7.31-10.77-7.51-12.4-14.15-9.18-19.48-45.94-20.7-56.22-8.49,32.12-5.23,61.47,.57,113.68,2.48,22.28,5.28,47.54,7.86,78.93,4.54,55.39,21.75,86.23,35.39,102.34,14.24,16.83,27.65,21.54,28.7,21.89Z"/></g></g>
+                                    
+                                        <g id="b" class="earL1"><g><g><path class="an" d="M115.43,541.9c6.2,36.3,3.29,80.68-14.15,83.65-11.51,1.96-20.3-23-29.09-41.21-4.53-9.38-16.04-11.12-21.24-41.54-6.2-36.3,4.24-58.27,21.68-61.24,17.44-2.98,36.6,24.04,42.79,60.34Z"/><path class="at" d="M99.97,628.17c-10.55,0-18.17-16.8-25.56-33.07-1.47-3.24-2.99-6.59-4.48-9.66-1.19-2.47-3.03-4.44-5.16-6.72-5.29-5.67-12.52-13.42-16.29-35.48-3.02-17.68-2.29-33.05,2.11-44.44,4.26-11.05,11.94-18.04,21.61-19.69,9.43-1.61,19.4,4.23,28.07,16.46,8.29,11.7,14.55,28,17.61,45.92,5.77,33.8,4.56,83-16.2,86.54-.58,.1-1.16,.15-1.73,.15Zm-24.66-144.33c-.76,0-1.51,.06-2.25,.19-7.98,1.36-14.14,7.09-17.79,16.56-4.07,10.55-4.71,25.01-1.84,41.8,3.51,20.58,9.89,27.42,15.02,32.91,2.31,2.47,4.49,4.81,6.01,7.96,1.51,3.12,3.04,6.5,4.52,9.77,6.67,14.7,14.23,31.37,21.89,30.06,14.83-2.53,18.28-44.6,12.11-80.77-2.94-17.19-8.89-32.78-16.76-43.87-6.75-9.51-14.08-14.61-20.9-14.61Z"/></g><g><path class="an" d="M95.72,514.84c-1.41,.24-25.93-34.61-30.45,5.2-4.52,39.81,20.29,71.26,27.2,67.56,6.91-3.7,17.65-17.29,11.29-25.64"/><path class="at" d="M95.72,514.84c-.67-.27-1.39-1.03-1.95-1.51l-1.83-1.66c-4.41-3.83-13.61-12.78-19.34-7.81-5.36,5.54-5.55,19.18-5.52,26.74,.31,12.74,3.31,25.46,8.83,36.94,2.73,5.72,6.16,11.25,10.49,15.6,1.09,1.05,2.27,2.01,3.44,2.58,.7,.31,1.2,.48,1.71,.39,.37-.11,.87-.45,1.26-.65,5.13-3.29,9.69-8.46,11.74-14.31,1.02-2.95,1.02-6.4-.8-9.21,6.79,8.22-2.05,21.03-9.13,26.26-6.06,5.13-14.46-5.46-17.67-9.87-9.71-13.84-14.53-30.84-14.59-47.68,.04-23.06,8.6-45.57,30.12-19.51l1.55,1.92c.51,.52,1.03,1.45,1.67,1.77h0Z"/></g></g></g>
+                                        
+                                        <g id="c" class="earR1"><g><g><path class="an" d="M490.17,541.76c-7.5,36.05-7.39,80.26,7.86,83.43,10.06,2.09,19.22-22.65,28-40.67,4.52-9.28,14.8-10.87,21.08-41.09,7.5-36.05-.51-58.04-15.76-61.21-15.25-3.17-33.69,23.49-41.19,59.54Z"/><path class="at" d="M499.29,627.82c-.58,0-1.17-.06-1.77-.19-18.35-3.82-16.78-52.81-9.79-86.38h0c7.9-37.98,27.3-64.99,44.14-61.48,18.07,3.76,25.02,28.95,17.7,64.17-4.54,21.83-11.35,29.45-16.33,35.01-2.02,2.25-3.76,4.2-4.96,6.67-1.48,3.04-3.01,6.36-4.5,9.57-7.73,16.75-15.06,32.63-24.49,32.63Zm-6.67-85.55h0c-8.41,40.46-5.65,78.07,5.92,80.47,.24,.05,.47,.07,.71,.07,6.28,0,13.86-16.43,19.99-29.72,1.49-3.23,3.04-6.58,4.54-9.67,1.5-3.09,3.56-5.38,5.73-7.81,4.85-5.42,10.89-12.17,15.16-32.69,6.6-31.75,1.05-55.16-13.82-58.26-13.65-2.83-31.15,23.54-38.23,57.6Z"/></g><g><path class="an" d="M509.1,515.06c1.23,.26,24.85-34.14,26.63,5.54s-21.9,70.68-27.8,66.91c-5.9-3.76-14.64-17.41-8.55-25.66"/><path class="at" d="M509.1,515.06c4.12-4.73,7.66-10.23,13.62-13.66,8.64-4.67,12.91,3.7,14.16,11.08,2.26,12.94,1.21,26.11-2.07,38.69-1.73,6.27-4.01,12.39-6.95,18.2-3.4,6.42-10.77,19.06-18.52,20.17-1.11,.11-2.43-.55-3.23-1.31-2.68-2.26-4.62-4.96-6.23-7.85-2.98-5.52-4.99-13.28-.5-18.53-3.36,5.62-.72,12.32,2.6,17.26,1.89,2.74,4.15,5.39,6.88,6.98,1.89-.18,3.51-1.98,4.92-3.39,11.71-13.73,17.78-33.25,19.44-51.07,.55-6.15,.54-12.45-.17-18.5-.41-2.97-1.1-6.01-2.55-8.2-3.68-5.27-10.76,.93-14.31,3.81-1.73,1.45-3.56,3.28-5.23,4.83-.57,.44-1.18,1.26-1.85,1.5h0Z"/></g></g></g>
+                                        
+                                        <g id="d" class="earL3"><g><circle class="al" cx="99.81" cy="554.57" r="34.83"/><path class="at" d="M99.81,592.9c-21.14,0-38.33-17.2-38.33-38.33s17.2-38.33,38.33-38.33,38.33,17.2,38.33,38.33-17.2,38.33-38.33,38.33Zm0-69.66c-17.28,0-31.33,14.06-31.33,31.33s14.06,31.33,31.33,31.33,31.33-14.06,31.33-31.33-14.06-31.33-31.33-31.33Z"/></g><g><path class="ao" d="M100.74,588.88c.71,3.04,1.12,6.4,1.12,9.9,0,13.02-5.52,24.03-12.06,24.03s-12.06-11-12.06-24.03c0-10.99,3.94-20.55,9.1-23.26,2.07-1.33,1.62-3.91,1.73-4.63l-.7-.44c-1.77-1.1-4.09-.96-5.62,.46-5.64,5.24-9.78,16.05-9.78,27.86,0,17,7.61,30.31,17.33,30.31s17.33-13.31,17.33-30.31c0-4.15-.46-8.08-1.29-11.65-1.51,.92-3.24,1.53-5.1,1.75Z"/><path class="at" d="M89.79,630.09c-10.28,0-18.33-13.75-18.33-31.31,0-11.66,3.96-22.89,10.09-28.59,1.83-1.71,4.64-1.94,6.83-.58l1.25,.78-.09,.65c-.01,.1,0,.24-.01,.42,0,1.14-.01,3.53-2.17,4.91-5.03,2.65-8.63,12.06-8.63,22.42,0,12.27,5.17,23.03,11.06,23.03s11.06-10.76,11.06-23.03c0-3.34-.37-6.59-1.09-9.67l-.26-1.09,1.11-.13c1.68-.2,3.26-.74,4.7-1.61l1.18-.72,.31,1.35c.87,3.75,1.31,7.75,1.31,11.88,0,17.56-8.05,31.31-18.33,31.31Zm-4.48-59.36c-.88,0-1.74,.31-2.4,.92-5.66,5.26-9.46,16.17-9.46,27.13,0,16.44,7.17,29.31,16.33,29.31s16.33-12.87,16.33-29.31c0-3.51-.33-6.92-.98-10.14-1.02,.49-2.09,.84-3.2,1.06,.6,2.92,.91,5.97,.91,9.08,0,13.8-5.86,25.03-13.06,25.03s-13.06-11.23-13.06-25.03c0-11.23,3.96-21.16,9.63-24.14,1.07-.69,1.17-1.96,1.17-3.19h0l-.21-.14c-.62-.39-1.32-.58-2.01-.58Z"/></g></g>
+                                        
+                                        <g id="e" class="earR3"><g><circle class="ap" cx="493.22" cy="581.6" r="34.83"/><path class="at" d="M493.22,619.93c-21.14,0-38.33-17.2-38.33-38.33s17.2-38.33,38.33-38.33,38.33,17.2,38.33,38.33-17.2,38.33-38.33,38.33Zm0-69.66c-17.28,0-31.33,14.06-31.33,31.33s14.06,31.33,31.33,31.33,31.33-14.06,31.33-31.33-14.06-31.33-31.33-31.33Z"/></g><g><path class="ao" d="M504.17,615.87c.71,3.04,1.12,6.4,1.12,9.9,0,13.02-5.52,24.03-12.06,24.03s-12.06-11-12.06-24.03c0-10.99,3.94-20.55,9.1-23.26,2.07-1.33,1.62-3.91,1.73-4.63l-.7-.44c-1.77-1.1-4.09-.96-5.62,.46-5.64,5.24-9.78,16.05-9.78,27.86,0,17,7.61,30.31,17.33,30.31s17.33-13.31,17.33-30.31c0-4.15-.46-8.08-1.29-11.65-1.51,.92-3.24,1.53-5.1,1.75Z"/><path class="at" d="M493.22,657.08c-10.28,0-18.33-13.75-18.33-31.31,0-11.66,3.96-22.89,10.09-28.59,1.83-1.71,4.64-1.94,6.83-.58l1.25,.78-.09,.65c-.01,.1,0,.24,0,.42,0,1.14-.01,3.52-2.17,4.91-5.03,2.65-8.63,12.06-8.63,22.42,0,12.27,5.17,23.03,11.06,23.03s11.06-10.76,11.06-23.03c0-3.34-.37-6.59-1.09-9.67l-.26-1.09,1.11-.13c1.68-.2,3.26-.74,4.7-1.61l1.18-.72,.31,1.35c.87,3.75,1.31,7.75,1.31,11.88,0,17.56-8.05,31.31-18.33,31.31Zm-4.48-59.36c-.88,0-1.74,.31-2.4,.93-5.66,5.26-9.46,16.17-9.46,27.13,0,16.44,7.17,29.31,16.33,29.31s16.33-12.87,16.33-29.31c0-3.51-.33-6.92-.98-10.14-1.02,.49-2.09,.84-3.2,1.06,.6,2.92,.91,5.97,.91,9.08,0,13.8-5.86,25.03-13.06,25.03s-13.06-11.23-13.06-25.03c0-11.23,3.96-21.16,9.63-24.14,1.07-.69,1.17-1.95,1.17-3.19h0l-.21-.14c-.62-.39-1.32-.58-2.01-.58Z"/></g></g>
+                                        
+                                        <g id="f" class="earL2"><g><g><path class="aq" d="M112.71,498c2.97,35.3-11.76,90.59-38.03,93.04-47.61,4.43-59.22-48.85-70.74-90.34-9.48-34.14,29.1-58.64,55.25-62.15,26.19-3.52,47.44-12.63,53.51,59.45Z"/><path class="at" d="M69.23,593.8c-42.42,0-55.29-47.09-65.71-85.24-.66-2.43-1.32-4.83-1.98-7.19-3.28-11.8-1.3-23.66,5.72-34.3,11.97-18.14,35.14-28.78,51.6-30.99,1.94-.26,3.84-.55,5.72-.84,11.68-1.78,22.71-3.46,31.74,3.66,10.31,8.13,16.13,26.29,18.88,58.89h0c1.55,18.4-1.59,41.34-8.18,59.89-7.79,21.92-19.2,34.65-32.1,35.85-1.95,.18-3.85,.27-5.69,.27Zm10.27-155.11c-4.36,0-9.1,.72-14.16,1.49-1.91,.29-3.84,.58-5.81,.85-15.87,2.13-37.48,12.7-48.1,28.79-6.29,9.53-8,19.7-5.08,30.21,.66,2.37,1.32,4.78,1.98,7.21,10.93,39.98,23.31,85.29,66.12,81.3,24.56-2.29,38.63-56.38,35.77-90.34h0c-2.58-30.68-7.98-48.28-16.99-55.38-3.96-3.13-8.58-4.13-13.73-4.13Z"/></g><g class="am"><path class="aq" d="M46.97,457.48s7.41,20.93-9.2,33.81,17.88,58.48,17.88,58.48c0,0,3.07-36.23,30.14-21.7"/><path class="aa" d="M46.97,457.48c4.04,8.05,4.79,17.94,1.03,26.46-1.75,4.11-4.69,7.67-7.99,10.64-6.43,6.9,2.62,23.8,6.29,31.15,3.89,7.31,8.28,14.5,12.86,21.39l-7.89,2.28c2.54-18.48,15.92-35.61,34.52-21.33-3.71-1.24-7.55-2.01-11.06-1.75-9.3,.74-12.76,10.73-14.09,18.65-.77,3.67-.83,12.79-1.02,16.58-4.8-5.91-11.26-13.48-15.29-19.8-8.19-12.44-23.9-39.68-10.21-52.52,.4-.33,1.11-.96,1.54-1.25,9.84-6.62,12.82-18.43,11.31-30.5h0Z"/></g></g></g>
+                                        
+                                        <g id="g" class="earR2"><g><g><path class="aq" d="M488.9,494.92c-2.97,35.3,11.76,90.59,38.03,93.04,47.61,4.43,59.22-48.85,70.74-90.34,9.48-34.14-29.1-58.64-55.25-62.15-26.19-3.52-47.44-12.63-53.51,59.45Z"/><path class="at" d="M532.39,590.72c-1.84,0-3.73-.09-5.69-.27-12.91-1.2-24.31-13.93-32.1-35.85-6.6-18.55-9.73-41.5-8.18-59.89,2.75-32.6,8.57-50.76,18.88-58.89,9.03-7.12,20.06-5.44,31.74-3.66,1.88,.29,3.79,.58,5.72,.84,16.46,2.21,39.63,12.85,51.6,30.99,7.02,10.64,9,22.5,5.72,34.3-.66,2.36-1.31,4.77-1.98,7.19-10.43,38.15-23.3,85.23-65.71,85.24Zm-10.28-155.11c-5.15,0-9.76,1.01-13.73,4.13-9.01,7.11-14.41,24.7-16.99,55.38-2.86,33.96,11.21,88.05,35.77,90.34,1.77,.17,3.49,.25,5.16,.25,38.67,0,50.48-43.22,60.96-81.55,.67-2.43,1.32-4.84,1.98-7.21,2.92-10.51,1.21-20.68-5.08-30.21-10.62-16.09-32.23-26.66-48.1-28.79-1.96-.26-3.9-.56-5.81-.85-5.06-.77-9.8-1.49-14.16-1.49Z"/></g><g class="am"><path class="aq" d="M554.65,454.39s-7.41,20.93,9.2,33.81c16.6,12.87-17.88,58.48-17.88,58.48,0,0-3.07-36.23-30.14-21.7"/><path class="aa" d="M554.65,454.39c-4.04,8.05-4.79,17.94-1.03,26.46,1.75,4.11,4.69,7.67,7.99,10.64,6.43,6.9-2.62,23.8-6.29,31.15-3.89,7.31-8.28,14.5-12.86,21.39l7.89,2.28c-2.54-18.48-15.92-35.61-34.52-21.33,3.71-1.24,7.55-2.01,11.06-1.75,9.3,.74,12.76,10.73,14.09,18.65,.77,3.67,.83,12.79,1.02,16.58,4.8-5.91,11.26-13.48,15.29-19.8,8.19-12.44,23.9-39.68,10.21-52.52-.4-.33-1.11-.96-1.54-1.25-9.84-6.62-12.82-18.43-11.31-30.5h0Z"/></g></g></g>
+                                        
+                                        <g id="h" class="potato"><path class="al" d="M273.28,105.63c-110.27-15.1-171.3,140.06-112.16,215.01-103.22,96.26-81.41,375.98,106,391.99,190.6,11.06,318.64-224.06,178.73-354,0,0,24.65,10.5,35.75-66,25.74-176.35-64.24-214.36-208.32-187Z"/><g><path class="ap" d="M460.63,269.46c-11.09,76.5-35.75,66-35.75,66,8.02,7.45,15.16,15.26,21.46,23.33,3.52,.98,25.08,3.98,35.25-66.16,12.62-86.46-2.59-139.65-38.34-168.21,20.23,31.07,27.15,78.07,17.38,145.03Z"/><path class="ap" d="M447.23,359.94c101.94,132.82-21.92,339.92-201.08,329.52-40.41-3.45-73.11-19.17-98.53-42.66,27.4,36.11,66.94,61.35,119.5,65.84,189.97,11.02,317.77-222.48,180.11-352.69Z"/></g><path class="at" d="M144.73,331.74c7.92-9.79,17.82-17.6,28.77-23.79,12.56-6.93,23.06-9.32,37.23-5.21-3,1.16-6.13,1.82-9.05,2.58-8.71,2.06-15.93,6.21-23.85,10.52-10.67,5.77-21.41,12.07-33.11,15.9h0Z"/><path class="at" d="M421.38,332.21c7.37,6.93,13.36,13.92,21.45,19.51,4.95,3.49,9.48,5.47,15.56,7.99-17.39,8.17-37.47-9.69-37.01-27.5h0Z"/><path class="ak" d="M294.26,471.41c-10.98-4.69-21.2-8.87-32.77-10.7-7.09-1.18-13.47-1.22-21.09-1.52,16.41-13.43,44.53-6.51,53.85,12.21h0Z"/><path class="ak" d="M397.21,218.63c-6.58-.64-13.18-1.58-19.7-2.23-3.64-.44-7.11-.72-10.79-1.29-1.56-.25-3.16-.41-4.96-.94,1.17-1.3,2.51-2.47,3.99-3.37,10.07-6.22,26.23-3.54,31.45,7.84h0Z"/><path class="ak" d="M317.58,134.61c-6.45,1.46-13.01,2.64-19.4,4.07-3.59,.72-6.98,1.55-10.65,2.16-1.56,.26-3.13,.6-5,.66,.7-1.61,1.61-3.13,2.73-4.46,7.61-9.07,23.79-11.6,32.32-2.44h0Z"/><path class="ak" d="M413.95,571.23c-6.51-.99-11.73-2.09-17.83-2.97-5.95-.99-11.91-1.32-17.97-2.68,9.53-10.65,30.24-7.82,35.81,5.64h0Z"/><path class="ak" d="M430.5,427.78c-6.51-.99-11.73-2.09-17.83-2.97-5.95-.99-11.91-1.32-17.97-2.68,9.53-10.65,30.24-7.82,35.81,5.64h0Z"/><path class="ak" d="M279.79,635.44c6.54-.77,11.87-1.08,17.98-1.85,6-.62,11.84-1.87,18.04-2.16-6.38,12.79-27.1,15.52-36.03,4.01h0Z"/><path class="ak" d="M270.97,298.89c6.54-.77,11.87-1.07,17.98-1.85,6-.62,11.84-1.87,18.04-2.16-6.38,12.79-27.1,15.52-36.03,4.01h0Z"/><path class="ak" d="M183.35,549.13c-6.51,1.03-11.81,1.55-17.9,2.56-5.97,.86-11.76,2.34-17.94,2.88,5.87-13.04,26.46-16.59,35.84-5.44h0Z"/><path class="ak" d="M217.56,379.2c-6.51,1.03-11.81,1.55-17.9,2.56-5.97,.86-11.76,2.34-17.94,2.88,5.87-13.04,26.46-16.59,35.84-5.44h0Z"/><path class="ak" d="M229.55,222.74c-6.45,1.34-11.72,2.12-17.75,3.43-5.92,1.15-11.63,2.91-17.78,3.75,5.23-13.31,25.62-17.86,35.53-7.18h0Z"/><g class="aj"><path class="an" d="M300.97,105.63c27.37-4.77,52.95-7.54,76.38-7.95-25.41-.48-53.6,2.12-84.06,7.22,2.53,.17,5.09,.41,7.67,.73Z"/><path class="an" d="M294.25,712.64c-204.32-16.01-228.09-295.73-115.56-391.99-60.38-70.2-5.86-210.73,100.05-215.89-113.72-5.39-174.7,143.08-112.08,215.89-112.53,96.26-88.76,375.98,115.56,391.99,6.81,.36,13.54,.45,20.2,.3-2.71-.06-5.43-.15-8.17-.3Z"/></g><path class="ai" d="M273.28,105.63c-110.27-15.1-171.3,140.06-112.16,215.01-103.22,96.26-81.41,375.98,106,391.99,190.6,11.06,318.64-224.06,178.73-354,0,0,24.65,10.5,35.75-66,25.74-176.35-64.24-214.36-208.32-187Z"/></g>
+                                        
+                                        <g id="i" class="mouth1"><g><g><ellipse class="at" cx="285.93" cy="611.37" rx="106.04" ry="18.8"/><path class="at" d="M285.93,632.68c-28.47,0-55.25-1.97-75.42-5.55-33.12-5.87-33.12-13.31-33.12-15.76s0-9.88,33.12-15.76c20.17-3.58,46.95-5.55,75.42-5.55s55.25,1.97,75.42,5.55c33.12,5.87,33.12,13.31,33.12,15.76s0,9.88-33.12,15.76c-20.17,3.58-46.95,5.55-75.42,5.55Zm0-37.61c-28.18,0-54.66,1.94-74.55,5.47-22.94,4.07-29,8.87-29,10.83s6.06,6.77,29,10.83c19.89,3.53,46.36,5.47,74.55,5.47s54.66-1.94,74.55-5.47c22.94-4.07,29-8.87,29-10.83s-6.06-6.77-29-10.83c-19.89-3.53-46.36-5.47-74.55-5.47Z"/></g><g><path class="ah" d="M321.36,626.53c0,7.19-15.81,13.01-35.31,13.01s-35.31-5.83-35.31-13.01,21.33-15.31,35.31-10.07c15.72-4.41,35.31,2.88,35.31,10.07Z"/><path class="at" d="M286.05,642.05c-18.33,0-37.81-5.44-37.81-15.51,0-2.76,1.84-5.49,5.31-7.89,7.49-5.19,21.91-8.4,32.6-4.79,12.28-3.14,26.43,.18,33.23,5.33,3.7,2.8,4.48,5.55,4.48,7.36,0,10.08-19.48,15.51-37.81,15.51Zm-10.12-24.75c-7.26,0-14.94,2.27-19.53,5.45-2.33,1.61-3.16,3.01-3.16,3.78,0,4.39,12.48,10.51,32.81,10.51s32.81-6.12,32.81-10.51c0-.94-.91-2.17-2.5-3.37-5.84-4.42-18.83-7.32-29.64-4.29l-.79,.22-.77-.29c-2.78-1.04-5.97-1.5-9.24-1.5Z"/></g><g><path class="ah" d="M341.34,626.53c0,7.19-25.44,13.01-56.83,13.01s-56.83-5.83-56.83-13.01,34.33-15.31,56.83-10.07c25.31-4.41,56.83,2.88,56.83,10.07Z"/><path class="at" d="M284.51,642.05c-20.52,0-59.33-3.24-59.33-15.51,0-1.82,1-3.54,2.98-5.11,8.71-6.91,37.45-11.72,56.41-7.51,21.95-3.69,48.78,1.12,56.52,7.63,1.82,1.53,2.74,3.21,2.74,4.99,0,12.27-38.81,15.51-59.33,15.51Zm-16.38-24.78c-14.82,0-29.96,3.58-35.96,7.44-1.81,1.16-1.99,1.85-1.99,1.86,0,3.54,19.18,10.48,54.33,10.48s54.32-6.94,54.33-10.51c0-.01-.09-.49-1.17-1.34-6.51-5.09-31.52-9.97-52.73-6.27l-.5,.09-.5-.12c-4.91-1.14-10.34-1.63-15.81-1.63Z"/></g><g><path class="ag" d="M413.3,601.52c.85-.76,1.3-1.6,1.3-2.53,0-10.97-57.75-7.54-123.03-19.86-63.82,11.03-123.03,8.89-123.03,19.86,0,.35,.06,.69,.16,1.02-.47,.33-.72,.84-.72,1.56,0,10.97,53.89,44.69,121.2,46.71,62.9-4.23,124.87-34.09,124.87-45.06,0-.78-.26-1.33-.75-1.7Zm-219.84,5.02c21.82,.72,56.03-2.33,94.8-8.65,40.62,6.92,80.01,9.91,103.72,8.47-21.34,7.51-56.92,20.62-101.33,24.27-38.86-2.06-74.47-15.56-97.19-24.08Z"/><path class="at" d="M289.23,651.28h-.15c-65.39-1.97-124.1-34.97-124.1-49.72,0-.87,.19-1.68,.55-2.38,0-.07,0-.13,0-.2,0-8.88,15.5-10.65,53.69-14.14,20.46-1.87,45.93-4.2,71.84-8.68l.53-.09,.53,.1c28.36,5.35,55.18,7.71,76.73,9.6,32.46,2.85,48.75,4.28,48.75,13.21,0,.77-.15,1.76-.72,2.81,.11,.45,.17,.92,.17,1.42,0,10.68-31.18,24.01-40.73,27.84-27.35,10.97-59.04,18.33-86.94,20.21h-.15Zm-118.19-49.27c.88,3.38,11.14,13.26,33.55,23.55,14.93,6.86,45.75,18.53,84.53,19.72,27.19-1.85,58.08-9.03,84.79-19.71,25.12-10.05,36.23-19.01,37.09-22.02l-.64-.48-20.23,7.12c-21.08,7.45-56.36,19.91-99.24,23.43l-.2,.02h-.2c-38.89-2.07-74.06-15.26-97.33-24l-17.84-6.69,18.23,.6c21.86,.72,56.21-2.42,94.22-8.62l.49-.08,.49,.08c39.21,6.68,78.69,9.91,103.04,8.43l17.53-1.07-.76-.57,2.73-2.44c.26-.23,.31-.36,.31-.36-.04,0-.84-1.93-11.53-3.74-7.83-1.33-18.92-2.3-31.75-3.43-21.55-1.89-48.33-4.25-76.79-9.58-25.96,4.46-51.35,6.78-71.78,8.65-14.16,1.29-26.39,2.41-35.15,3.89-12.17,2.06-13.06,4.2-13.09,4.29l.69,2.1-1.18,.88Zm38.97,7.46c21.82,7.81,50.13,16.52,80.59,18.16,33.51-2.77,61.55-10.84,82.74-17.96-23.78-.44-54.53-3.54-85.1-8.73-29.63,4.81-57.08,7.78-78.24,8.53Zm-39.52-7.04l-.05,.04,.05-.04Z"/></g></g></g>
+                                        
+                                        <g id="j" class="nose1"><g><g><g><path class="an" d="M278.02,462.81l-32.78,60.52c-23.96,23.86,6.52,35.72,16.77,30.07l67.59-.58c13.62,4.46,30.01-11.93,12.23-26.48l-30.01-64.5c-4.16-20.85-30.84-18.43-33.79,.97Z"/><path class="at" d="M255.48,557.31c-6.66,0-14.48-2.91-18.75-8.59-3.26-4.34-6.72-13.59,6.47-26.89l32.41-59.83c1.98-11.61,11.37-17.1,19.35-17.28,9.52-.24,17.08,6.18,19.23,16.34l29.65,63.73c7.95,6.73,10.35,14.97,6.42,22.14-3.92,7.16-13.1,10.79-21.06,8.41l-66.6,.57c-1.99,.94-4.47,1.41-7.13,1.41Zm39.93-107.6c-.11,0-.22,0-.32,0-6.06,.14-13.21,4.42-14.6,13.48l-.07,.43-33.17,61.23-.26,.26c-5.67,5.65-11.37,13.81-6.27,20.61,4.45,5.92,15.25,8.16,20.06,5.5l.55-.31,68.63-.59,.39,.13c5.74,1.88,12.7-.78,15.52-5.93,2.79-5.09,.73-11.01-5.65-16.24l-.44-.36-30.38-65.29-.06-.29c-1.86-9.32-8.36-12.63-13.95-12.63Z"/></g><g><ellipse class="an" cx="295.8" cy="542.54" rx="31.65" ry="22.31"/><path class="at" d="M295.8,567.35c-18.83,0-34.15-11.13-34.15-24.81s15.32-24.81,34.15-24.81,34.15,11.13,34.15,24.81-15.32,24.81-34.15,24.81Zm0-44.62c-16.07,0-29.15,8.89-29.15,19.81s13.08,19.81,29.15,19.81,29.15-8.89,29.15-19.81-13.08-19.81-29.15-19.81Z"/></g><ellipse class="an" cx="296.05" cy="534.44" rx="34.68" ry="28.47"/></g><path class="ab" d="M266.82,529.4c0-10.27,5.93-18.6,13.24-18.6s.94,10.25,.94,20.52,6.37,16.68-.94,16.68-13.24-8.33-13.24-18.6Z"/></g></g>
+                                        
+                                        <g id="k" class="eyeR1"><g><g><path class="ae" d="M355.67,479.75c12.35-.48,29.3,.87,48.49,4,16.43-5.13,27.87-29.82,27.87-29.82,0,0-4.52-15.95-11.95-21.73-22.45-1.61-40.9-4.85-51.61-9.01-18.13,4.58-31.07,30.74-31.07,30.74,0,0,7.16,19.83,18.28,25.82Z"/><path class="at" d="M404.27,485.29l-.35-.06c-18.72-3.05-35.83-4.47-48.19-3.98l-.41,.02-.36-.19c-11.49-6.19-18.67-25.8-18.98-26.63l-.22-.6,.28-.57c.54-1.09,13.46-26.83,32.05-31.52l.46-.12,.45,.17c10.71,4.15,28.88,7.32,51.18,8.91l.45,.03,.36,.28c7.73,6.01,12.28,21.83,12.47,22.5l.15,.54-.23,.5c-.48,1.03-11.91,25.35-28.78,30.62l-.34,.11Zm-43.57-7.13c11.88,0,27.01,1.41,43.35,4.06,14.16-4.69,24.67-24.95,26.38-28.41-.84-2.73-4.9-15.11-10.92-20.14-22.06-1.6-40.17-4.76-51.12-8.9-15.56,4.28-27.36,25.48-29.34,29.26,1.28,3.27,7.76,18.93,17,24.21,1.49-.05,3.05-.08,4.67-.08Z"/></g><path class="a" d="M362.3,450.74c.43-6.03,4.25-10.67,8.54-10.37s.13,6.05-.3,12.08c-.43,6.03,3.05,10.05-1.25,9.75s-7.43-5.44-7-11.47Z"/></g><polygon class="at" points="443.27 429.96 460.72 430.07 453.74 403.54 437.19 410.31 425.53 395.66 414.7 402.62 402.49 385.25 389.27 396.02 373.55 380.56 360.9 393.19 338.23 381.69 333.71 400.01 351.21 403.81 351.7 401.82 367.22 409.69 375.43 401.5 389.81 415.64 399.94 407.39 410.76 422.79 422.63 415.16 432.13 427.11 441.51 423.27 443.27 429.96"/></g>
+                                        
+                                        <g id="m" class="eyeL1"><g><g><path class="as" d="M236.38,423.06c-12.49,3.29-30.58,5.7-51.48,6.68-8.11,5.71-13.12,22.17-13.12,22.17,0,0,9.04,21.75,22.51,27.26,24.07-2.21,42.74-2.33,45.68,.34,13.95-5.42,23.38-27.6,23.38-27.6,0,0-11.07-23.89-26.96-28.85Z"/><path class="at" d="M239.65,481.25l-.69-.62c-1.94-1.77-16.71-2.51-44.54,.04l-.37,.03-.34-.14c-13.89-5.68-22.95-27.16-23.33-28.07l-.21-.5,.16-.51c.21-.69,5.26-17.02,13.69-22.96l.36-.25,.44-.02c20.39-.96,38.57-3.32,51.17-6.63l.42-.11,.41,.13c16.34,5.1,27.41,28.66,27.88,29.66l.28,.6-.26,.61c-.4,.93-9.84,22.82-24.21,28.41l-.87,.34Zm-15.29-5.25c7.13,0,13.11,.48,15.76,1.83,11.58-5.05,19.98-22.4,21.57-25.89-1.82-3.66-11.86-22.79-25.35-27.32-12.69,3.29-30.73,5.62-50.92,6.6-6.63,4.99-11.14,17.88-12.04,20.62,1.42,3.2,9.68,20.85,21.14,25.81,8.52-.78,20.23-1.65,29.84-1.65Z"/></g><path class="a" d="M197.43,450.86c0-4.75,2.74-8.6,6.12-8.6s.44,4.74,.44,9.48,2.94,7.71-.44,7.71-6.12-3.85-6.12-8.6Z"/></g><polygon class="at" points="157.18 423.4 138.78 421.87 149.08 396.09 165.77 404.4 179.69 390.9 190.33 398.85 205.13 382.69 217.86 394.66 236.15 380.74 248.07 394.5 273.25 385.18 275.97 403.85 257.1 406 256.8 403.97 239.58 410.35 231.84 401.42 215.11 414.16 205.35 404.98 192.23 419.31 180.58 410.6 169.23 421.61 159.78 416.9 157.18 423.4"/></g>
+                                        
+                                        <g id="o" class="hat1"><g><g><ellipse class="au" cx="331.45" cy="189.81" rx="83.17" ry="214.44" transform="translate(21.16 412.54) rotate(-65.47)"/><path class="at" d="M457.92,309.16c-4.21,0-8.57-.13-13.08-.39-43.67-2.54-96.57-17.11-148.95-41.01s-98.05-54.32-128.58-85.64c-31.09-31.9-42.89-61.15-33.21-82.36,9.68-21.21,39.5-31.47,83.98-28.88,43.67,2.54,96.57,17.11,148.95,41.01s98.05,54.32,128.58,85.65c31.1,31.9,42.89,61.15,33.21,82.36l-2.27-1.04,2.27,1.04c-8.7,19.06-33.66,29.28-70.89,29.28ZM204.81,75.46c-35.04,0-58.33,9.19-66.17,26.36-8.77,19.21,2.68,46.48,32.24,76.8,30.11,30.89,75.25,60.93,127.08,84.59,51.83,23.66,104.1,38.06,147.17,40.57,42.27,2.46,70.37-6.76,79.14-25.97h0c8.77-19.21-2.68-46.48-32.24-76.8-30.11-30.89-75.25-60.93-127.08-84.59-51.83-23.66-104.1-38.06-147.17-40.57-4.48-.26-8.81-.39-12.97-.39Z"/></g><g><path class="au" d="M497.56,165.8c1.11-1.24,2.01-2.61,2.69-4.09,10.75-23.56-38.33-69.03-109.62-101.57-71.29-32.54-137.81-39.82-148.56-16.26l-32.35,70.88,.14,.06c-.37,.59-.71,1.21-1.01,1.85-10.75,23.56,38.33,69.03,109.62,101.57,71.29,32.54,137.81,39.82,148.56,16.26,.68-1.49,1.12-3.06,1.33-4.72l29.2-63.98Z"/><path class="at" d="M430.83,250.82c-28.72,0-69.84-10.43-113.39-30.31-73.31-33.46-121.89-79.24-111.02-104.51h0l.11-.24s.04-.08,.06-.12c.02-.04,.03-.07,.05-.11l33.17-72.68c11.5-25.19,78.21-18.6,151.87,15.02,34.72,15.84,65.34,35.23,86.24,54.59,21.56,19.98,30.3,37.83,24.62,50.29-.72,1.58-1.68,3.07-2.84,4.43l-28.89,63.31c-.26,1.77-.76,3.47-1.48,5.05-4.7,10.3-18.63,15.28-38.48,15.28ZM213.04,113.53l.46,.21-1.52,2.42c-.34,.54-.62,1.05-.85,1.56-9.99,21.89,39.65,66.88,108.39,98.25,42.48,19.39,84.12,29.85,112.08,29.85,17.29,0,29.35-4,33.16-12.36,.56-1.24,.94-2.58,1.12-3.99l.05-.38,.16-.35,29.36-64.32,.25-.28c.95-1.06,1.72-2.23,2.28-3.47,4.65-10.18-3.91-26.42-23.47-44.54-20.51-19.01-50.67-38.08-84.92-53.71-68.74-31.37-135.26-39.38-145.24-17.49l-31.31,68.6Z"/></g><g><ellipse class="au" cx="371.16" cy="102.8" rx="46.89" ry="141.9" transform="translate(123.55 397.78) rotate(-65.47)"/><path class="at" d="M464.05,178.03c-28.72,0-69.84-10.43-113.39-30.31-73.66-33.62-122.36-79.69-110.86-104.88,11.5-25.19,78.21-18.6,151.87,15.02,34.72,15.84,65.34,35.23,86.24,54.59,21.56,19.98,30.3,37.83,24.62,50.29-4.7,10.3-18.63,15.28-38.48,15.28ZM277.51,32.56c-17.29,0-29.35,4-33.16,12.36-9.99,21.89,39.65,66.88,108.39,98.25,42.48,19.39,84.12,29.85,112.08,29.85,17.29,0,29.35-4,33.16-12.36,4.65-10.18-3.91-26.42-23.47-44.54-20.51-19.01-50.67-38.08-84.92-53.71-42.48-19.39-84.12-29.85-112.08-29.85Z"/></g></g></g>
+                                        
+                                        <g id="p" class="eyeL3"><g><g><g><ellipse class="aa" cx="213.25" cy="458.45" rx="37.69" ry="49.66"/><path class="at" d="M213.25,511.1c-22.44,0-40.69-23.62-40.69-52.66s18.25-52.65,40.69-52.65,40.69,23.62,40.69,52.65-18.25,52.66-40.69,52.66Zm0-99.31c-19.13,0-34.69,20.93-34.69,46.65s15.56,46.66,34.69,46.66,34.69-20.93,34.69-46.66-15.56-46.65-34.69-46.65Z"/></g><g><path class="at" d="M211.4,459.2l-15.42,30.54c-8.45-6.59-13.59-18.15-13.59-30.54,0-19.78,13.09-36.05,29.01-36.05s29.01,16.28,29.01,36.05c0,17.77-10.57,33.02-24.71,35.66l-4.3-35.66Z"/><path class="at" d="M213.97,497.21l-3.76-31.21-13.53,26.81-1.92-1.5c-8.99-7.01-14.36-19.02-14.36-32.12,0-20.98,13.91-38.05,31.01-38.05s31.01,17.07,31.01,38.05c0,18.65-11.32,34.82-26.34,37.62l-2.1,.39Zm-1.38-44.82l4.82,40c12.1-3.51,20.99-17.34,20.99-33.19,0-18.78-12.12-34.05-27.01-34.05s-27.01,15.28-27.01,34.05c0,10.75,4.15,20.99,10.95,27.37l17.25-34.17Z"/></g></g><ellipse class="aa" cx="190.82" cy="449.34" rx="4.14" ry="7.89"/></g></g>
+                                        
+                                        <g id="q" class="eyeR3"><g><g><g><ellipse class="aa" cx="371.84" cy="463.83" rx="37.69" ry="49.66"/><path class="at" d="M371.84,516.49c-22.44,0-40.69-23.62-40.69-52.66s18.25-52.66,40.69-52.66,40.69,23.62,40.69,52.66-18.25,52.66-40.69,52.66Zm0-99.31c-19.13,0-34.69,20.93-34.69,46.66s15.56,46.66,34.69,46.66,34.69-20.93,34.69-46.66-15.56-46.66-34.69-46.66Z"/></g><g><path class="at" d="M369.99,464.58l-7.55,34.81c-12.62-4.23-21.46-18.56-21.46-34.81,0-19.78,13.09-36.05,29.01-36.05s29.01,16.28,29.01,36.05c0,12.26-5.03,23.71-13.33,30.33l-15.68-30.33Z"/><path class="at" d="M363.92,502l-2.12-.71c-13.44-4.5-22.82-19.6-22.82-36.71,0-20.98,13.91-38.05,31.01-38.05s31.01,17.07,31.01,38.05c0,12.93-5.26,24.86-14.08,31.9l-1.91,1.52-14.25-27.56-6.84,31.56Zm6.07-71.47c-14.89,0-27.01,15.28-27.01,34.05,0,14.49,7.3,27.32,18,32.1l8.23-37.96,17.06,33.01c6.75-6.42,10.72-16.38,10.72-27.15,0-18.78-12.12-34.05-27.01-34.05Z"/></g></g><ellipse class="aa" cx="353.46" cy="454.18" rx="4.14" ry="7.89"/></g></g>
+                                        
+                                        <g id="r" class="nose3"><path class="at" d="M264.28,517.53c6.18,8.02,12.25,16.28,21.52,20.43,15.22,6.11,31.25-5.91,45.32-11.95-1.74,3.4-3.87,6.53-6.31,9.46-10.27,12.64-28.79,21.54-44.18,12.6-10.68-6.26-16.53-18.55-16.35-30.54h0Z"/></g>
+                                        
+                                        <g id="s" class="mouth3"><g><ellipse class="at" cx="287.97" cy="611.75" rx="62.59" ry="48.38"/><path class="at" d="M287.97,662.12c-35.62,0-64.6-22.6-64.6-50.38s28.98-50.38,64.6-50.38,64.6,22.6,64.6,50.38-28.98,50.38-64.6,50.38Zm0-96.76c-33.41,0-60.6,20.81-60.6,46.38s27.18,46.38,60.6,46.38,60.6-20.81,60.6-46.38-27.18-46.38-60.6-46.38Z"/></g><g><ellipse class="aa" cx="284.34" cy="611.75" rx="43.14" ry="31.94"/><path class="at" d="M284.33,644.19c-24.06,0-43.64-14.55-43.64-32.44s19.58-32.44,43.64-32.44,43.64,14.55,43.64,32.44-19.58,32.44-43.64,32.44Zm0-63.88c-23.51,0-42.64,14.1-42.64,31.44s19.13,31.44,42.64,31.44,42.64-14.1,42.64-31.44-19.13-31.44-42.64-31.44Z"/></g><rect class="at" x="285.28" y="554.61" width="3" height="113.51" transform="translate(-347.77 842.35) rotate(-84.87)"/><rect class="at" x="258.25" y="580.56" width="2" height="62.37" transform="translate(-35.7 16.39) rotate(-3.39)"/><rect class="at" x="282.54" y="563.33" width="2" height="80.4"/><rect class="at" x="271.63" y="611.54" width="71.41" height="2" transform="translate(-316.47 896.32) rotate(-87.82)"/></g>
+                                        
+                                        <g id="t" class="hat3"><g><path class="at" d="M207.93,90.06c-46.37,25.73-97.68,103.7-104.86,169.98s121.9,146.58,368.53,116.96c0,0,52.25-131.68-7.24-242.83-59.5-111.16-256.43-44.1-256.43-44.1Z"/><path class="at" d="M370.49,383.84c-126.44,0-207.41-32.82-243.79-68.79-17.78-17.57-26.12-36.61-24.12-55.07,3.4-31.45,16.83-67.1,37.8-100.4,20.06-31.85,44.6-57.35,67.31-69.95,.03-.01,.05-.03,.08-.04,.49-.17,49.95-16.82,106.04-19.66,32.96-1.67,61.75,1.69,85.55,9.98,29.79,10.38,51.81,28.55,65.44,54.02,30.8,57.53,31.13,120.61,25.99,163.39-5.57,46.34-18.59,79.53-18.72,79.86-.07,.17-.22,.29-.41,.31-36.46,4.38-70.19,6.35-101.18,6.35ZM208.13,90.52c-48.87,27.14-97.72,106.36-104.56,169.57-1.96,18.15,6.28,36.91,23.83,54.25,45.11,44.59,159.13,84.32,343.85,62.19,1.26-3.29,13.27-35.38,18.55-79.36,5.12-42.63,4.79-105.48-25.88-162.77-30.61-57.18-98.48-66.08-150.04-63.47-55.25,2.79-104.06,19.02-105.75,19.59Z"/></g><g><path class="au" d="M257.1,58.98c1.66,0-12.96-26.48-68.55-28.69,0,0,48.89,20.05,51.86,50.85,0,0-26.72-25.93-46.39-25.43,0,0,30.65,23.84,35.53,41.9,0,0-15.46-17.12-28.43-15.47,0,0,19.26,27.46,18.3,34.97s37.69-58.14,37.69-58.14Z"/><path class="at" d="M219.61,118.24c-.09,0-.17-.03-.24-.05-.38-.13-.53-.51-.46-1.13,.93-7.23-18.02-34.35-18.21-34.62-.1-.14-.12-.33-.05-.49s.22-.27,.39-.29c10.85-1.38,23.13,9.8,27.36,14.05-6.38-17.42-34.41-39.37-34.71-39.6-.17-.13-.23-.35-.17-.55s.25-.34,.46-.34c17.7-.45,40.63,19.85,45.75,24.61-4.18-29.39-50.91-48.88-51.39-49.08-.22-.09-.35-.33-.3-.57,.05-.24,.24-.42,.51-.39,53.58,2.13,69.2,26.47,69.15,29.02,0,.26-.12,.45-.27,.55-.9,1.53-9.25,15.68-17.78,29.56-16.61,27.06-19.19,29.31-20.07,29.31Zm-17.59-35.67c3.04,4.39,18.46,27.1,17.92,34.39,3.81-3.42,23.73-36.14,36.74-58.23,.01-.02,.03-.04,.04-.06-.51-2.77-16.42-25.04-65.52-27.75,9.99,4.6,47.14,23.45,49.71,50.18,.02,.21-.09,.41-.28,.5-.19,.09-.41,.05-.56-.09-.26-.25-25.51-24.53-44.6-25.27,5.69,4.57,30.18,25.01,34.57,41.26,.06,.22-.04,.46-.24,.57-.2,.11-.46,.07-.61-.1-.15-.17-14.77-16.2-27.16-15.38Zm55.09-24.09h0Z"/></g><g><path class="au" d="M267.49,59.81c-1.47-1.2,21.45-12.05,59.74-5.61,0,0-49.9,6.25-55.42,23.17,0,0,20.69-6.2,37.89,8.46,0,0-38.2-3.17-49.84,11.79,0,0,9.95-2.01,27.77,4.01,0,0-38.07,0-56.16,17.41-5.48,5.27,36.02-59.23,36.02-59.23Z"/><path class="at" d="M231.03,119.85c-.11,0-.23-.04-.35-.13-.55-.46-1.08-.89,17.7-30.78,8.55-13.61,17.33-27.29,18.55-29.18-.02-.13,0-.27,.07-.41,.91-2.01,22.79-11.96,60.32-5.65,.24,.04,.42,.26,.42,.5s-.19,.46-.44,.49c-.49,.06-47.9,6.18-54.68,21.96,4.29-.99,22.29-4.09,37.4,8.8,.17,.14,.22,.37,.14,.57-.08,.2-.29,.33-.5,.31-.37-.03-36.34-2.84-48.58,10.62,3.26-.34,12.44-.61,26.71,4.21,.23,.08,.37,.31,.33,.55-.04,.24-.25,.42-.49,.42-.38,0-38.08,.2-55.82,17.27-.17,.16-.47,.45-.79,.45Zm36.94-60.18c.04,.13,.02,.28-.06,.41-13.12,20.4-32.1,50.45-35.8,57.69,15.36-13.73,43.52-16.13,52.61-16.55-15.75-4.81-24.66-3.12-24.76-3.1-.21,.04-.41-.05-.52-.23s-.1-.4,.03-.57c10.46-13.45,41.29-12.52,48.71-12.09-16.54-13.05-36.02-7.44-36.22-7.38-.18,.05-.37,0-.5-.13-.13-.13-.18-.33-.12-.5,4.78-14.65,41.13-21.3,52.51-23.04-33.56-4.89-54.35,3.66-55.88,5.5Z"/></g></g>
+                                        
+                                        <g id="u" class="mouth2"><g><g><g><path class="at" d="M402.08,589.42s-46.69,63.41-104.28,63.41-104.28-63.41-104.28-63.41h208.55Z"/><path class="at" d="M297.81,654.32c-30.2,0-57.29-17.43-74.7-32.06-18.79-15.78-30.67-31.8-30.79-31.96l-1.76-2.39h214.49l-1.76,2.39c-.12,.16-12,16.18-30.79,31.96-17.41,14.62-44.5,32.06-74.7,32.06Zm-101.2-63.41c9.21,11.49,51.39,60.41,101.2,60.41s91.99-48.92,101.2-60.41H196.6Z"/></g><g><path class="ag" d="M297.81,656.82c-58.93,0-105.54-62.38-107.5-65.04l-4.69-6.37h224.38l-4.69,6.37c-1.96,2.66-48.56,65.04-107.5,65.04Zm-95.89-63.41c13.48,15.79,51.73,55.41,95.89,55.41s82.4-39.62,95.89-55.41H201.92Z"/><path class="at" d="M297.81,658.32c-59.68,0-106.73-62.97-108.71-65.65l-6.45-8.76h230.31l-6.45,8.76c-1.97,2.68-49.02,65.65-108.71,65.65Zm-109.22-71.41l2.93,3.98c1.94,2.63,48.11,64.43,106.29,64.43s104.35-61.79,106.29-64.43l2.93-3.98H188.59Zm109.22,63.41c-44.45,0-82.66-39.12-97.03-55.93l-2.11-2.47h198.28l-2.11,2.47c-14.36,16.82-52.57,55.93-97.03,55.93Zm-92.6-55.41c15.49,17.56,51.43,52.41,92.6,52.41s77.11-34.85,92.6-52.41H205.21Z"/></g></g><path class="aa" d="M252.34,592.42v4.62c0,4.1,3.35,7.45,7.45,7.45s7.45-3.35,7.45-7.45v.04c0,4.1,3.35,7.45,7.45,7.45s7.45-3.35,7.45-7.45v-.02c0,4.1,3.35,7.45,7.45,7.45s8.45-3.35,8.45-7.45l-1,.04c0,4.1,3.35,7.45,7.45,7.45s7.45-3.35,7.45-7.45v-.04c0,4.1,3.35,7.45,7.45,7.45s7.45-3.35,7.45-7.45v.04c0,4.1,3.35,7.45,7.45,7.45s7.45-3.35,7.45-7.45v-4.68h-89.38Z"/></g></g>
+                                        
+                                        <g id="v" class="nose2"><g><path class="au" d="M250.74,553.77c-10.82,.65-21.01,.86-29.73,.47-41.95-1.9-66.28,12.12-66.28,43.77v23.73l28.2-25.89,10.58,15.82,16.92-26.61,13.4,21.57s22.56-18.34,24.68-19.42c2.12-1.08,19.04,7.91,21.86,8.63,2.22,.57,19.27-13.55,26.44-19.6,7.18,6.05,24.22,20.17,26.44,19.6,2.82-.72,19.74-9.71,21.86-8.63,2.12,1.08,24.68,19.42,24.68,19.42l13.4-21.57,16.92,26.61,10.58-15.82,28.2,25.89v-23.73c0-31.64-24.33-45.67-66.28-43.77-8.72,.39-18.91,.19-29.73-.47"/><path class="at" d="M440.89,626.29l-29.84-27.39-10.98,16.43-16.86-26.51-12.92,20.8-1.76-1.43c-8.25-6.7-21.69-17.48-24.1-19.05-2,.19-9.41,3.64-13.45,5.53-3.87,1.8-6.12,2.84-7.23,3.12-1.35,.35-3.38,.86-26.94-18.92-23.56,19.79-25.59,19.26-26.94,18.92-1.11-.28-3.36-1.32-7.23-3.12-4.04-1.88-11.45-5.33-13.45-5.53-2.39,1.55-15.85,12.34-24.1,19.05l-1.76,1.43-12.92-20.8-16.86,26.51-10.98-16.43-29.84,27.39v-28.28c0-13.09,4.05-23.6,12.05-31.24,11.32-10.82,30.27-15.7,56.32-14.52,8.26,.37,18.19,.22,29.52-.47l.24,3.99c-11.47,.69-21.54,.85-29.94,.47-24.92-1.13-42.88,3.38-53.38,13.42-7.17,6.86-10.81,16.39-10.81,28.35v19.18l26.57-24.39,10.17,15.21,16.98-26.71,13.88,22.35c6.02-4.88,21.32-17.22,23.27-18.22,1.83-.93,4.95,.12,16.73,5.6,2.42,1.13,5.13,2.39,6.23,2.78,1.93-.7,9.47-6.03,24.96-19.1l1.29-1.09,1.29,1.09c15.49,13.06,23.03,18.4,24.96,19.1,1.1-.39,3.81-1.65,6.23-2.78,11.78-5.49,14.91-6.53,16.73-5.6,1.95,.99,17.25,13.34,23.27,18.21l13.88-22.35,16.99,26.71,10.17-15.21,26.57,24.39v-19.18c0-11.96-3.64-21.5-10.81-28.35-10.5-10.03-28.46-14.55-53.38-13.42-8.4,.38-18.47,.22-29.94-.47l.24-3.99c11.33,.68,21.26,.84,29.52,.47,26.06-1.18,45.01,3.71,56.32,14.52,7.99,7.64,12.05,18.15,12.05,31.24v28.28Zm-117.62-32.41h0Zm-52.91,0h0Z"/></g><g><g><path class="ar" d="M325.19,508.88c-4.09-25.35-15.46-50.24-28.74-50.24s-27.75,25.02-32.89,50.47c-12.71,1.82-22.49,12.74-22.49,25.96,0,14.49,11.74,26.23,26.23,26.23,2.04,0,4.02-.24,5.92-.68,6.15,5.75,14.04,8.23,21.9,8.23s15.77-2.52,21.55-8.52c2.25,.63,4.63,.98,7.09,.98,14.49,0,26.23-11.74,26.23-26.23s-10.98-25.44-24.79-26.19Z"/><path class="at" d="M295.12,570.35c-8.67,0-16.38-2.8-22.34-8.1-1.81,.37-3.65,.55-5.48,.55-15.29,0-27.73-12.44-27.73-27.73,0-13.35,9.7-24.89,22.73-27.27,5.21-24.56,19.57-50.65,34.15-50.65s25.74,25.12,30.03,50.33c14.12,1.37,25.01,13.27,25.01,27.6,0,15.29-12.44,27.73-27.73,27.73-2.23,0-4.46-.27-6.63-.81-5.6,5.47-13.18,8.35-22,8.35Zm-21.46-11.37l.58,.55c6.91,6.46,15.16,7.82,20.87,7.82,8.32,0,15.4-2.79,20.47-8.06l.62-.65,.86,.24c2.18,.61,4.43,.92,6.68,.92,13.64,0,24.73-11.09,24.73-24.73s-10.27-23.98-23.38-24.69l-1.21-.07-.19-1.19c-3.83-23.74-14.68-48.98-27.26-48.98-11.64,0-26.03,22.56-31.42,49.26l-.21,1.04-1.05,.15c-12.09,1.73-21.2,12.25-21.2,24.47,0,13.64,11.09,24.73,24.73,24.73,1.86,0,3.74-.22,5.58-.64l.78-.18Z"/></g><path class="ac" d="M319.17,536.01c0,10.6-2.47,18.57-9.22,18.57s0-5.19,0-15.79,4.5-25-6.61-57.14c11.34,14.89,15.83,43.75,15.83,54.35Z"/><path class="ac" d="M345.07,539.94c0,5.79-3.28,10.49-7.33,10.49s0-2.84,0-8.63-4.05-12.35,0-12.35,7.33,4.7,7.33,10.49Z"/></g></g>
+                                        
+                                        <g id="w" class="eyeL2"><g><g><g><ellipse class="aa" cx="222.14" cy="442.75" rx="46.62" ry="58.48"/><path class="at" d="M222.14,503.74c-27.08,0-49.12-27.36-49.12-60.98s22.03-60.98,49.12-60.98,49.12,27.36,49.12,60.98-22.03,60.98-49.12,60.98Zm0-116.97c-24.33,0-44.12,25.11-44.12,55.98s19.79,55.98,44.12,55.98,44.12-25.11,44.12-55.98-19.79-55.98-44.12-55.98Z"/></g><ellipse class="at" cx="226.71" cy="442.75" rx="17.14" ry="25.47"/><ellipse class="aa" cx="220.39" cy="433.11" rx="3.42" ry="7.03"/></g><path class="at" d="M170.62,408.38l-19.06-6.07c.21-.67,5.3-16.43,20.9-29.44,14.09-11.75,39.79-23.64,82.19-13.56l-4.62,19.46c-63.82-15.17-78.8,27.77-79.4,29.6Z"/></g></g>
+                                        
+                                        <g id="x" class="eyeR2"><g><g><g><ellipse class="aa" cx="377.35" cy="445.19" rx="46.62" ry="58.48"/><path class="at" d="M377.35,506.17c-27.08,0-49.12-27.36-49.12-60.98s22.04-60.98,49.12-60.98,49.12,27.36,49.12,60.98-22.03,60.98-49.12,60.98Zm0-116.97c-24.33,0-44.12,25.11-44.12,55.98s19.79,55.98,44.12,55.98,44.12-25.11,44.12-55.98-19.79-55.98-44.12-55.98Z"/></g><ellipse class="at" cx="372.77" cy="445.19" rx="17.14" ry="25.47"/><ellipse class="aa" cx="366.57" cy="433.33" rx="3.42" ry="7.03"/></g><path class="at" d="M427.99,408.38l18.74-6.07c-.21-.67-5.21-16.43-20.55-29.44-13.86-11.75-39.14-23.64-80.84-13.56l4.55,19.46c62.77-15.17,77.5,27.77,78.1,29.6Z"/></g></g>
+                                        
+                                        <g id="y" class="hat2"><path class="ad" d="M526.29,160.67c0-68.34-85.5-123.75-190.97-123.75-48.11,0-92.06,11.53-125.65,30.56,29.99-12.7,65.83-20.09,104.33-20.09,105.47,0,190.97,55.4,190.97,123.75,0,7.79-4.98,14.69-13.77,20.71,21.72-8,35.09-18.39,35.09-31.17Z"/><g><ellipse class="au" cx="317.58" cy="228" rx="264.33" ry="66.61" transform="translate(-31.12 51.23) rotate(-8.79)"/><path d="M137.82,189.36c-7.75-50.1,9.71-98.82,43.63-135.38-45.75,37.57-71.07,94.17-62.02,152.67,12.63,81.63,303.46,46.16,359.71-27.06-83.9,60.98-329.73,84.67-341.32,9.77Z"/><path class="au" d="M488.12,149.63C473.87,57.5,379.78-4.42,277.97,11.32c-37.17,5.75-70.22,21.06-96.52,42.66-33.92,36.56-51.38,85.27-43.63,135.38,11.59,74.9,257.42,51.22,341.32-9.77,7.24-9.42,10.6-19.47,8.98-29.97Z"/></g></g>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide slide-4">
+                    <div class="content-wrapper">
+                        <h3>Slick Slider</h3>
+                        <p>Slick Slider is a fully responsive, scalable carousel plug in for jQuery. It has a ton of configurations and useful features. This instance is set to show 3 slides, and to auto scroll 3 slides every 3 seconds. Scrolling is set to infinite.</p>
+                        <div class="slider-box">
+                            <div class="slick-slider-01">
+                                <div><img src="images/cat01.jpg" alt="a cat"></div>
+                                <div><img src="images/cat02.jpg" alt="a cat"></div>
+                                <div><img src="images/cat04.jpg" alt="a cat"></div>
+                                <div><img src="images/cat03.jpg" alt="a cat"></div>
+                                <div><img src="images/cat05.jpg" alt="a cat"></div>
+                                <div><img src="images/cat06.jpg" alt="a cat"></div>
+                                <div><img src="images/cat07.jpg" alt="a cat"></div>
+                                <div><img src="images/cat08.jpg" alt="a cat"></div>
+                                <div><img src="images/cat09.jpg" alt="a cat"></div>
+                                <div><img src="images/cat10.jpg" alt="a cat"></div>
+                                <div><img src="images/cat11.jpg" alt="a cat"></div>
+                                <div><img src="images/cat12.jpg" alt="a cat"></div>
+                                <div><img src="images/cat14.jpg" alt="a cat"></div>
+                                <div><img src="images/cat13.jpg" alt="a cat"></div>
+                                <div><img src="images/cat15.jpg" alt="a cat"></div>
+                                <div><img src="images/cat16.jpg" alt="a cat"></div>
+                                <div><img src="images/cat17.jpg" alt="a cat"></div>
+                                <div><img src="images/cat18.jpg" alt="a cat"></div>
+                                <div><img src="images/cat19.jpg" alt="a cat"></div>
+                                <div><img src="images/cat20.jpg" alt="a cat"></div>
+                                <div><img src="images/cat21.jpg" alt="a cat"></div>
+                                <div><img src="images/cat22.jpg" alt="a cat"></div>
+                                <div><img src="images/cat24.jpg" alt="a cat"></div>
+                                <div><img src="images/cat23.jpg" alt="a cat"></div>
+                                <div><img src="images/cat25.jpg" alt="a cat"></div>
+                                <div><img src="images/cat26.jpg" alt="a cat"></div>
+                                <div><img src="images/cat27.jpg" alt="a cat"></div>
+                                <div><img src="images/cat28.jpg" alt="a cat"></div>
+                                <div><img src="images/cat29.jpg" alt="a cat"></div>
+                                <div><img src="images/cat30.jpg" alt="a cat"></div>
+                                <div><img src="images/cat31.jpg" alt="a cat"></div>
+                                <div><img src="images/cat32.jpg" alt="a cat"></div>
+                                <div><img src="images/cat34.jpg" alt="a cat"></div>
+                                <div><img src="images/cat33.jpg" alt="a cat"></div>
+                                <div><img src="images/cat35.jpg" alt="a cat"></div>
+                                <div><img src="images/cat36.jpg" alt="a cat"></div>
+                                <div><img src="images/cat37.jpg" alt="a cat"></div>
+                                <div><img src="images/cat38.jpg" alt="a cat"></div>
+                                <div><img src="images/cat39.jpg" alt="a cat"></div>
+                                <div><img src="images/cat40.jpg" alt="a cat"></div>
+                                <div><img src="images/cat41.jpg" alt="a cat"></div>
+                                <div><img src="images/cat42.jpg" alt="a cat"></div>
+                                <div><img src="images/cat44.jpg" alt="a cat"></div>
+                                <div><img src="images/cat43.jpg" alt="a cat"></div>
+                                <div><img src="images/cat45.jpg" alt="a cat"></div>
+                                <div><img src="images/cat46.jpg" alt="a cat"></div>
+                                <div><img src="images/cat47.jpg" alt="a cat"></div>
+                                <div><img src="images/cat48.jpg" alt="a cat"></div>
+                                <div><img src="images/cat49.jpg" alt="a cat"></div>
+                                <div><img src="images/cat50.jpg" alt="a cat"></div>
+                                <div><img src="images/cat51.jpg" alt="a cat"></div>
+                                <div><img src="images/cat52.jpg" alt="a cat"></div>
+                                <div><img src="images/cat54.jpg" alt="a cat"></div>
+                                <div><img src="images/cat53.jpg" alt="a cat"></div>
+                                <div><img src="images/cat55.jpg" alt="a cat"></div>
+                                <div><img src="images/cat56.jpg" alt="a cat"></div>
+                                <div><img src="images/cat57.jpg" alt="a cat"></div>
+                                <div><img src="images/cat58.jpg" alt="a cat"></div>
+                                <div><img src="images/cat59.jpg" alt="a cat"></div>
+                                <div><img src="images/cat60.jpg" alt="a cat"></div>
+                            </div> 
+                        </div>   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+        <script src="slick/slick.min.js"></script>
+        <script src="scripts/fullpage.min.js"></script>
+        <script src="scripts/fullpage.extensions.min.js"></script>
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
