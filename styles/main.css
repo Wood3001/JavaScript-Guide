@@ -23,6 +23,10 @@ header {
     flex-direction: row;
 }
 
+.gn ul {
+    list-style-type: none;
+}
+
 .gn li a {
     text-decoration: none;
     color: #ffffff;
@@ -91,9 +95,6 @@ p {
 
 .quote {
     margin: 5px 0 0 0;
-}
-ul {
-    list-style: disc;
 }
 
 code {
