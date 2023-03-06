@@ -11,7 +11,7 @@ $(document).ready(function(){
         licenseKey:'29KOJ-OOV66-K7LN6-IH32I-ZCYNN',
         autoScrolling:true,
         scrollHorizontally: true,
-        dragAndMove: true,
+        dragAndMove: false,
         loopBottom: true
     });
 
@@ -21,7 +21,7 @@ $(document).ready(function(){
         // declare a variable that represents the 'spout' element
         var spout = document.querySelector('.spout');
         // animate the spout element back & forth across the board
-        gsap.fromTo(spout, {left:'0px'},{left:'500px', duration: 10, ease:'none', repeat:-1, yoyo:true});
+        gsap.fromTo(spout, {left:'0px'},{left:'40vw', duration: 10, ease:'none', repeat:-1, yoyo:true});
         // declare a variable and set it's value to 1
         var blockNum = 1;
         // declare an array of hex colour values

@@ -110,13 +110,10 @@ code {
 
 /* ////////////////// FULLPAGE.JS ///////////////////// */
 
-.slide-1 {
-    align-items: center;
-}
-
 .slide {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .slide-head {
@@ -139,16 +136,19 @@ code {
 .section-1 .slide-1 {
     background-image: url(../images/AdobeStock_388938359.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .section-2 .slide-1 {
     background-image: url(../images/AdobeStock_440085515.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .section-3 .slide-1 {
     background-image: url(../images/AdobeStock_394150143.jpeg);
     background-size: cover;
+    background-position: center;
 }
 
 .section .slide h2 {
@@ -414,4 +414,98 @@ code {
     background: #422040;
     font-weight: normal;
     color: #fff;
+}
+
+/* ////////////////// ARROWS ///////////////////// */
+
+.fp-arrow {
+    opacity: 0.5;
+}
+
+
+@media screen and (max-width:768px) {
+
+    /* ////////////////// TYPOGRAPHY ///////////////////// */
+
+    h2 {
+        font-size: 60px; 
+        width: fit-content;
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        font-size: 15px;
+        margin: 5px;
+    }
+
+    .two-col {
+        flex-direction: column;
+    }
+
+    .l-col {
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    
+    .r-col {
+        display: none;
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    
+    .r-col img {
+        margin-left: 0px;
+    }
+
+    .section .slide .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 70vw;
+        height: 90vh;
+        margin-top: 80px;
+    }
+    
+    table, code {
+        max-width: 80vw;
+        overflow-x: scroll;
+    }
+
+
+    .board-container {
+        width: 275px;
+        height: 360px;
+        bottom: 40px;
+    }
+    
+    .board {
+        width: 285px;
+        height: 350px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .display-box {
+        width: 335px;
+        padding: 1rem;
+        margin: 0;
+        transform: scale(0.65);
+
+    }
+
+    .flex-wrapper {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .svg {
+        width: 100px;
+    }
+    
 }
