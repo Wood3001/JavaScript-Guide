@@ -85,7 +85,7 @@ h4 {
     font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size: 30px;
-    margin: 10px;
+    margin: 10px 0;
 }
 
 h5 {
@@ -93,8 +93,8 @@ h5 {
     font-family: 'Biryani', sans-serif;
     font-weight: 600;
     font-size: 20px;
-    margin: 15px;
-}
+    margin: 15px 0;
+} 
 
 th {
     text-align: left;
@@ -105,7 +105,7 @@ p {
     font-family: 'Hind Guntur', sans-serif;
     font-weight: 400;
     font-size: 16px;
-    margin: 10px;
+    margin: 10px 0;
     line-height: 1.25;
 }
 
@@ -141,11 +141,17 @@ code {
     margin-bottom: 15px;
 }
 
-.section .slide .content-wrapper {
+.section .slide {
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    width: 100%;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
     margin-top: 80px;
+    width: 600px;
 }
 
 .section-1 {
@@ -195,6 +201,10 @@ code {
     align-items: center;
 }
 
+.text-wrapper {
+    height: 475px;
+}
+
 /* ////////////////// DOM OBJECTS ///////////////////// */
 
 .two-col {
@@ -213,8 +223,8 @@ code {
 }
 
 .r-col img {
-    height: 60vh;
-    margin-left: 10px;
+    height: 375px;
+    margin-left: 50px;
 }
 
 @keyframes draw {
