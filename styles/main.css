@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 /* ////////////////// HEADER ///////////////////// */
 
 header {
@@ -30,11 +34,6 @@ header {
 .hide {
     display: none;
 }
-
-/* @keyframes slide-up {
-    0% { transform: translateY(0);}
-    100% { transform: translateY(1000);}
- }
 
 /* ////////////////// GLOBAL NAV ///////////////////// */
 
