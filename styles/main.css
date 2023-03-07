@@ -16,6 +16,26 @@ header {
     justify-content: space-between;
 }
 
+/* ////////////////// LOADER ///////////////////// */
+
+.loader {
+    position: absolute;
+    background-color: #422040;
+    width: 100%;
+    height: 100%;
+    z-index: 10000001;
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
+}
+
+/* @keyframes slide-up {
+    0% { transform: translateY(0);}
+    100% { transform: translateY(1000);}
+ }
+
 /* ////////////////// GLOBAL NAV ///////////////////// */
 
 .gn {
@@ -125,7 +145,6 @@ code {
     display: flex;
     flex-direction: column;
     width: 70vw;
-    height: 90vh;
     margin-top: 80px;
 }
 
