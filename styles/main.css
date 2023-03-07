@@ -100,6 +100,10 @@ th {
     text-align: left;
 }
 
+.pl-1 {
+    padding-left: 2rem;
+}
+
 p {
     color: #422040;
     font-family: 'Hind Guntur', sans-serif;
@@ -151,7 +155,7 @@ code {
     display: flex;
     flex-direction: column;
     margin-top: 80px;
-    width: 600px;
+    width: 700px;
 }
 
 .section-1 {
